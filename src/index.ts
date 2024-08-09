@@ -8,7 +8,7 @@ const cors = require('cors'); // Import the cors package
 // Define the CORS options
 const corsOptions = {
   credentials: true,
-  origin: ['http://localhost:3000', 'http://localhost:80'] // Whitelist the domains you want to allow
+  origin: ['https://kumaradarshkanungo.github.io/', 'http://localhost:80', ] // Whitelist the domains you want to allow
 };
 
 /*
