@@ -26,7 +26,7 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT || 80;
 
-app.use(express.static('public'));
+app.use(express.static('ui'));
 app.use(cors(corsOptions));
 
 app.use(function(req, res, next) {
@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
 /* Define a route for the root path ("/")
  using the HTTP GET method */
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
+  res.sendFile("/index.html");
 });
 
 app.get("/schedules", (req: Request, res: Response) => {
