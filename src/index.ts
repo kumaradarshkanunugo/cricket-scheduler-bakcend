@@ -2,6 +2,15 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import fs from "fs";
 
+
+const cors = require('cors'); // Import the cors package
+
+// Define the CORS options
+const corsOptions = {
+  credentials: true,
+  origin: ['http://localhost:3000', 'http://localhost:80'] // Whitelist the domains you want to allow
+};
+
 /*
  * Load up and parse configuration details from
  * the `.env` file to the `process.env`
@@ -18,6 +27,7 @@ const app: Express = express();
 const port = process.env.PORT || 80;
 
 app.use(express.static('public'));
+app.use(cors(corsOptions));
 
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
