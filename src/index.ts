@@ -17,7 +17,15 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT || 80;
 
-app.use(express.static('public'))
+app.use(express.static('public'));
+
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', "true");
+  next();
+});
 
 /* Define a route for the root path ("/")
  using the HTTP GET method */
