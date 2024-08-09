@@ -1,0 +1,10 @@
+{
+    "schedules": [{
+        "timeStamp": "1723273200000",
+        "team": "RHINOS",
+        "opponent": "Team Volcanos",
+        "groundName": "Pheonix Cricket Ground",
+        "groundLocation": "https://maps.app.goo.gl/QansfFGzYut5HrdC7?g_st=com.google.maps.preview.copy",
+        "Overs": "30"
+    }]
+}
